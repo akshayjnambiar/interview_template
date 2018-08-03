@@ -1,0 +1,29 @@
+Arrays:
+
+- Array allocation is dynamic in Java, static in c
+
+- In C length of array is found by sizeof(), In Java using length member
+
+- Program to rotate an array by d numbers.
+	- Time Complexity = O(n) and Space Complexity = O(d)
+	- Time Complexity = O(n*d) and Space Complexity = O(1)
+	- Time Complexity = O(n) and Space Complexity = O(1) 
+		- Juggling with GCD
+		- Reversing arrays
+		- Block swapping
+
+- Program to search for an element in an already sorted and rotated array.
+	- Modified binary search O(log n)
+  
+- Given an array A[] and a number x, check for pair in A[] with sum as x
+  - Sort and find using 2 indexes (first and last) {O(nlogn), O(1)}
+  - Using a HashSet {O(n), O(n)}
+
+- Given an array A[] and a number x, check for pair in A[] with difference as x
+  - Sort and find using 2 indexes (both first) {O(nlogn), O(1)}
+  - Using a HashSet {O(n), O(n)}
+  
+- Find maximum value of Sum( i*arr[i]) with only rotations on given array allowed
+  - Rj =   Rj-1 + arrSum - n * arr[n-j] {O(n)}
+
+

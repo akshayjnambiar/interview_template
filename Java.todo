@@ -1,0 +1,67 @@
+Core Java:
+
+- What is try with resources
+- Interfaces and abstract class, in java 8 interfaces has default -- what about diamond problem here
+- multiple inheritance in interfaces
+- what is composition in java? (has-a relationship, Person-Job)
+
+Lambdas:
+
+- What are lambdas
+- What are method references
+- Program to concat all integer numbers
+
+Streams:
+
+- What are Streams
+- Parallel Stream vs Stream
+- Program - double all even numbers from a list and add to another list
+    - shared mutability in last step if used forEach(list::add) instead of .collect(Collectors.toList())  (Use parallel streams)
+- Program - given a list of a Class Person, create a map where their name is the key and 
+          - value is all the people with that name
+          - value is ages of all the people with that name
+- Program - Given an ordered list, find the double of the first even number greater than 3.
+      - will it be slower than using a for loop break?  why?
+
+
+
+Garbage Collections:
+
+- Different types of Garbage Collectors
+    -  Serial
+    -  Parallel
+    -  Parallel Old
+    -  Concurrent Mark and Sweep
+    -  G1
+- System.gc()
+- Garbage collection in Oracle JVM
+- What is Thread Local Allocation Buffer
+- While minor garbage collection, there can be objects in old generation that 
+      references objects in young generation.(Card tables)
+
+
+Memory Leaks:
+
+- Class Loader memory Leaks
+  -   Class loader keeps reference to all objects it creates and vice versa, 
+      so if static variables are present in that class, then memory leaks can happen
+  -   When deploying without restarting server class loader changes but old class loader and the objects are not gc'ed
+- Thread Local memory Leaks
+  -   Thread locals are created by class loader and stores copy of the instance in weak hash-maps of which remove method
+      is not called.
+- Off Heap memory Leaks
+  -   Native code, Direct Buffers, Memory Mapped files
+
+
+Concurrency and Multi-threading:
+
+- Singleton Pattern
+  - Naive one
+  - using synchronized keyword
+  - wait and notify
+  - volatile
+
+- lock key used by synchronized keyword. (static and non-static)
+  -   How to use same key for synchronizing static and non-static methods
+
+
